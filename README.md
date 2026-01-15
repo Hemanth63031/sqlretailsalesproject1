@@ -22,7 +22,7 @@ Window Functions
 CTE (Common Table Expressions)
 
 📂 Database Schema
-'''sql
+
 create table retailsales(
 					transactions_id int primary key,
 					sale_date DATE,
@@ -36,7 +36,7 @@ create table retailsales(
 					cogs float,
 					total_sale float
                         );
-'''
+
 🧹 Data Cleaning
 
 Before analysis, records with NULL values in critical columns were identified and removed to ensure data accuracy.
