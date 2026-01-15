@@ -36,7 +36,6 @@ create table retailsales(
 					cogs float,
 					total_sale float
                         );
-                        
 '''
 🧹 Data Cleaning
 
