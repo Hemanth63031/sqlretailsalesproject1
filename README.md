@@ -23,18 +23,20 @@ CTE (Common Table Expressions)
 
 📂 Database Schema
 '''sql
-Table: retailsales
-transactions_id	Unique transaction ID
-sale_date	Date of sale
-sale_time	Time of sale
-customer_id	Customer identifier
-gender	Customer gender
-age	Customer age
-category	Product category
-quantiy	Quantity sold
-price_per_unit	Price per unit
-cogs	Cost of goods sold
-total_sale	Total sales amount
+create table retailsales(
+					transactions_id int primary key,
+					sale_date DATE,
+					sale_time TIME,
+					customer_id varchar(50),
+					gender varchar(20),
+					age int,
+					category varchar(50),
+					quantiy int,
+					price_per_unit float,
+					cogs float,
+					total_sale float
+                        );
+                        
 '''
 🧹 Data Cleaning
 
