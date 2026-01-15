@@ -1,4 +1,4 @@
-# sqlretailsalesproject1
+# sql_retailsales_project1
 🛒 Retail Sales Analysis using SQL
 📌 Project Description
 
