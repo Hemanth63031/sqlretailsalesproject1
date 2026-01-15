@@ -22,6 +22,7 @@ Window Functions
 CTE (Common Table Expressions)
 
 📂 Database Schema
+'''sql
 Table: retailsales
 transactions_id	Unique transaction ID
 sale_date	Date of sale
@@ -34,6 +35,7 @@ quantiy	Quantity sold
 price_per_unit	Price per unit
 cogs	Cost of goods sold
 total_sale	Total sales amount
+'''
 🧹 Data Cleaning
 
 Before analysis, records with NULL values in critical columns were identified and removed to ensure data accuracy.
