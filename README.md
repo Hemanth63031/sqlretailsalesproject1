@@ -45,10 +45,10 @@ Purpose:
 *To avoid incorrect aggregations and misleading insights.*
 
 # 🔍 Data Analysis – Business Questions & Explanations
-1️⃣**Retrieve all sales made on 2022-11-05?**
+1️⃣ **Retrieve all sales made on 2022-11-05?**
 
 Purpose:
-*To analyze all transactions that occurred on a specific day.*
+To analyze all transactions that occurred on a specific day.
 
 SELECT * 
 FROM retailsales
