@@ -1,11 +1,11 @@
 # sql_retailsales_project1
 🛒 Retail Sales Analysis using SQL
-📌 Project Description
+# 📌 Project Description
 
 This project analyzes retail sales transaction data using SQL to answer 10 real-world business questions.
 It focuses on data cleaning, exploration, and analytical querying, demonstrating strong SQL fundamentals required for Data Analyst / SQL Developer fresher roles.
 
-🧰 Tools & Skills Used
+# 🧰 Tools & Skills Used
 
 SQL
 
@@ -21,7 +21,7 @@ Window Functions
 
 CTE (Common Table Expressions)
 
-📂 Database Schema
+# 📂 Database Schema
 
 create table retailsales(
 					transactions_id int primary key,
@@ -37,27 +37,27 @@ create table retailsales(
 					total_sale float
                         );
 
-🧹 Data Cleaning
+# 🧹 Data Cleaning
 
 Before analysis, records with NULL values in critical columns were identified and removed to ensure data accuracy.
 
 Purpose:
-To avoid incorrect aggregations and misleading insights.
+*To avoid incorrect aggregations and misleading insights.*
 
-🔍 Data Analysis – Business Questions & Explanations
-Q1. Retrieve all sales made on 2022-11-05
+# 🔍 Data Analysis – Business Questions & Explanations
+1️⃣ **Retrieve all sales made on 2022-11-05?**
 
 Purpose:
-To analyze all transactions that occurred on a specific day.
+*To analyze all transactions that occurred on a specific day.*
 
 SELECT * 
 FROM retailsales
 WHERE sale_date = '2022-11-05';
 
-Q2. Retrieve all Clothing transactions with quantity ≥ 4 in November 2022
+2️⃣ **Retrieve all Clothing transactions with quantity ≥ 4 in November 2022?**
 
 Purpose:
-To identify bulk clothing purchases during a specific month.
+*To identify bulk clothing purchases during a specific month.*
 
 SELECT * 
 FROM retailsales
@@ -65,10 +65,10 @@ WHERE category = 'Clothing'
   AND quantiy >= 4
   AND TO_CHAR(sale_date, 'YYYY-MM') = '2022-11';
 
-Q3. Calculate total sales and total orders for each category
+3️⃣ **Calculate total sales and total orders for each category?**
 
 Purpose:
-To measure category-wise revenue performance and order volume.
+*To measure category-wise revenue performance and order volume.*
 
 SELECT category,
        SUM(total_sale) AS net_sale,
@@ -76,28 +76,28 @@ SELECT category,
 FROM retailsales
 GROUP BY category;
 
-Q4. Find the average age of customers who purchased Beauty products
+4️⃣ **Find the average age of customers who purchased Beauty products?**
 
 Purpose:
-To understand the target age group for the Beauty category.
+*To understand the target age group for the Beauty category.*
 
 SELECT ROUND(AVG(age), 2)
 FROM retailsales
 WHERE category = 'Beauty';
 
-Q5. Retrieve transactions where total sales exceed 1000
+5️⃣ **Retrieve transactions where total sales exceed 1000?**
 
 Purpose:
-To identify high-value transactions.
+*To identify high-value transactions.*
 
 SELECT *
 FROM retailsales
 WHERE total_sale > 1000;
 
-Q6. Find total number of transactions by gender in each category
+6️⃣ **Find total number of transactions by gender in each category**
 
 Purpose:
-To analyze purchasing behavior across genders and product categories.
+*To analyze purchasing behavior across genders and product categories.*
 
 SELECT category,
        gender,
@@ -106,10 +106,10 @@ FROM retailsales
 GROUP BY category, gender
 ORDER BY category;
 
-Q7. Find the best-selling month (highest average sales) for each year
+7️⃣ **Find the best-selling month (highest average sales) for each year?**
 
 Purpose:
-To identify peak-performing months annually.
+*To identify peak-performing months annually.*
 
 SELECT year, month, avg_sale
 FROM (
@@ -125,10 +125,10 @@ FROM (
 ) t
 WHERE rank = 1;
 
-Q8. Find the top 5 customers based on highest total sales
+8️⃣ **Find the top 5 customers based on highest total sales**
 
 Purpose:
-To identify the most valuable customers.
+*To identify the most valuable customers.*
 
 SELECT customer_id,
        SUM(total_sale) AS total_sale
@@ -137,17 +137,17 @@ GROUP BY customer_id
 ORDER BY total_sale DESC
 LIMIT 5;
 
-Q9. Count unique customers for each category
+9️⃣ **Count unique customers for each category**
 
 Purpose:
-To measure customer reach across product categories.
+*To measure customer reach across product categories.*
 
 SELECT category,
        COUNT(DISTINCT customer_id)
 FROM retailsales
 GROUP BY category;
 
-Q10. Create sales shifts and count orders per shift
+🔟 **Create sales shifts and count orders per shift**
 
 Shift Logic:
 
@@ -158,7 +158,7 @@ Afternoon: 12 PM – 5 PM
 Evening: After 5 PM
 
 Purpose:
-To understand order distribution across different times of the day.
+*To understand order distribution across different times of the day.*
 
 WITH hourly_sale AS (
     SELECT *,
@@ -174,7 +174,7 @@ SELECT shift,
 FROM hourly_sale
 GROUP BY shift;
 
-🎯 Project Outcome
+# 🎯 Project Outcome
 
 Improved understanding of customer behavior
 
@@ -184,7 +184,7 @@ Analyzed time-based sales patterns
 
 Demonstrated strong SQL analytical skills
 
-👤 Author
+# 👤 Author
 
-Hemu Hemanth
-Aspiring Data Analyst | SQL Developer
+Hemanth
+Aspiring Data Analyst 
